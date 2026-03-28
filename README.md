@@ -163,7 +163,7 @@ This:
 | Insert complexity            | `O(log n)` per price level                                | `O(1)` bitmap set + arena claim                               |
 | Match complexity             | `O(log n)` per price level consumed                       | `O(1)` per order consumed in linked list                      |
 | Cancel complexity            | `O(log n)` tree + scan in `VecDeque`                      | `O(1)` generation validate + linked‑list unlink + optional bitmap clear |
-| Cancel support (1M sim)      | ✅ 10% of ops                                              | ✅ 10% of ops (now fully wired)                               |
+| Cancel support (1M sim)      | 10% of ops                                              | 10% of ops (now fully wired)                               |
 | Memory allocation pattern    | Per‑tick heap allocation for `VecDeque`, arena per order  | Pre‑allocated arrays, zero heap for matching logic            |
 | Throughput (1M)              | 3.15M ops/sec                                              | 6.06M ops/sec                                                  |
 | p99 (1M)                     | 900 ns                                                     | 600 ns                                                         |
